@@ -30,17 +30,17 @@ fn main() {
       let now = std::time::Instant::now();
       model.test(&test_images, image_height * image_width, num_test_image, &test_labels);
       let elapsed = now.elapsed();
-      println!("Test time: {:.?}" , elapsed);
+      println!("Test time: {:?}" , elapsed);
 
       let now = std::time::Instant::now();
       model.train(&train_images, image_height * image_width, num_train_images, &train_labels, &p);
       let elapsed = now.elapsed();
-      println!("Epoch training time: {:.?}", elapsed);
+      println!("Epoch training time: {:?}", elapsed);
    }
 
    let now = std::time::Instant::now();
    model.test(&test_images, image_height * image_width, num_test_image, &test_labels);
    let elapsed = now.elapsed();
-   println!("Test time: {:.?}" , elapsed);
+   println!("Test time: {:?}" , elapsed);
 
 }
